@@ -1,4 +1,4 @@
-package com.cubeluke;
+package com.cubeluke.BankQuantitiesPlugin;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;

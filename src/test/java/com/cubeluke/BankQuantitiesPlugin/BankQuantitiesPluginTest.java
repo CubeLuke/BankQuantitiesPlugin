@@ -1,4 +1,4 @@
-package com.cubeluke;
+package com.cubeluke.BankQuantitiesPlugin;
 
 import net.runelite.client.RuneLite;
 import net.runelite.client.externalplugins.ExternalPluginManager;

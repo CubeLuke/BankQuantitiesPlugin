@@ -1,4 +1,4 @@
-package com.cubeluke;
+package com.cubeluke.BankQuantitiesPlugin;
 
 import com.google.inject.Inject;
 import net.runelite.api.Client;
