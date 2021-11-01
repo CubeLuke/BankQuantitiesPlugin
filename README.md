@@ -6,6 +6,3 @@ Data **will not** show in the tooltip up until you open your bank. The tooltips 
 The tooltip will show below the [Item Stats plugin](https://github.com/runelite/runelite/wiki/Item-Stats) if being used.
 
 ![](https://i.imgur.com/ZS5hZS5.png)
-
-### TODO in future update
-Currently, when Runelite is launched the data is captured when you open your bank, I need to add config so that it can save cross-session.

@@ -2,7 +2,9 @@ package com.cubeluke;
 
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.Client;
+import net.runelite.api.GameState;
 import net.runelite.api.InventoryID;
+import net.runelite.api.events.GameStateChanged;
 import net.runelite.api.events.ItemContainerChanged;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.plugins.Plugin;
@@ -19,7 +21,6 @@ import javax.inject.Inject;
 )
 public class BankQuantitiesPlugin extends Plugin
 {
-
 	@Inject
 	private Client client;
 
@@ -45,6 +46,20 @@ public class BankQuantitiesPlugin extends Plugin
 	protected void shutDown() throws Exception
 	{
 		overlayManager.remove(overlay);
+	}
+
+	@Subscribe
+	public void onGameStateChanged(GameStateChanged gameStateChanged)
+	{
+		if (gameStateChanged.getGameState() == GameState.LOGIN_SCREEN)
+		{
+			bankManager.saveBankConfig();
+		}
+
+		if (gameStateChanged.getGameState() == GameState.LOGGED_IN)
+		{
+			bankManager.loadBankConfig();
+		}
 	}
 
 	@Subscribe
